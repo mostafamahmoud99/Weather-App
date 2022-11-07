@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Wheater App</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <header id="header">
+      <nav class="navbar navbar-expand-lg shadow">
+        <div class="container">
+          <a class="navbar-brand" href="#">Weather</a>
+          <button
+            class="navbar-toggler border-2 border-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon pt-1">
+              <i class="fa-solid fa-bars text-white"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link active" aria-current="page" href="#header"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#search">Search</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#subscribe">Description</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row py-5 px-4">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="text-primary mb-4">Weather App</h3>
+            <p class="text-dark">
+              Having an up to date information about the weather helps us to
+              take well-read decisions. These weather apps constantly update the
+              forecasts for a day or hour or sometimes for even a minute. These
+              can be simply termed as the compact weather devices, as they do
+              not only tell about the temperature of that specific region
+              instead they can describe the accurate time of the sunrise and
+              sunset, the time of the rainfall, humidity levels, etc.
+            </p>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="img/Weather.gif" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- start weather -->
+    <section class="search" id="search">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center my-2 mx-auto">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control"
+              placeholder="&#128269; Search Country"
+            />
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="col-md-4 my-2">
+            <div class="card-item shadow bg-light rounded-3">
+              <div
+                class="head bg-dark text-white d-flex justify-content-between rounded-top p-3"
+              >
+                <p id="today" class="m-0"></p>
+                <p id="today-date" class="m-0"></p>
+              </div>
+              <div class="p-3">
+                <p id="location" class="fs-3"></p>
+                <div class="d-flex justify-content-between my-4">
+                  <div class="py-2">
+                    <h2 id="today-degree" class="d-inline-block"></h2>
+                    <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                  </div>
+                  <img id="today-icon" width="90" alt="" />
+                </div>
+                <p class="mb-4" id="today-description">sunny</p>
+                <div class="details">
+                  <i class="fas fa-umbrella pe-1"></i>
+                  <span id="humidty">22</span> <span>%</span>
+
+                  <i class="fas fa-wind ps-3 pe-1"></i>
+                  <span id="wind">22</span> <span>km/h</span>
+
+                  <i class="far fa-compass ps-3 pe-1"></i>
+                  <span id="compass">22</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-2">
+            <div class="card-item shadow bg-light text-center rounded-3">
+              <div
+                class="head bg-dark text-white d-flex justify-content-between rounded-top p-3"
+              >
+                <p class="nextDay m-0"></p>
+                <p class="nextDate m-0"></p>
+              </div>
+              <div class="p-3">
+                <div>
+                  <img class="nextDay-icon" alt="" />
+                </div>
+                <div>
+                  <h2 class="max-degree d-inline-block"></h2>
+                  <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                  <br />
+                  <p class="min-degree d-inline-block"></p>
+                  <p class="d-inline-block"><sup>o</sup>C</p>
+                  <p class="nextDay-description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-2">
+            <div class="card-item shadow bg-light text-center rounded-3">
+              <div
+                class="head bg-dark text-white d-flex justify-content-between rounded-top p-3"
+              >
+                <p class="nextDay m-0"></p>
+                <p class="nextDate m-0"></p>
+              </div>
+              <div class="p-3">
+                <div>
+                  <img class="nextDay-icon" alt="" />
+                </div>
+                <div>
+                  <h2 class="max-degree d-inline-block"></h2>
+                  <h2 class="d-inline-block"><sup>o</sup>C</h2>
+                  <br />
+                  <p class="min-degree d-inline-block"></p>
+                  <p class="d-inline-block"><sup>o</sup>C</p>
+                  <p class="nextDay-description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end weather -->
+    <!-- start subscribe -->
+    <section id="subscribe" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="sub text-center my-2">
+              <h4 class="text-primary">Subscribe</h4>
+              <p class="my-3">Get daily weather updates, quotes & more..</p>
+              <input
+                type="text"
+                class="form-control rounded-pill border-1 border-primary"
+                placeholder="Enter your email to subscribe"
+                id="subscribe-input"
+              />
+              <p class="my-3 text-danger d-none" id="emailValid">
+                Invalid Email Address!
+              </p>
+              <button
+                id="btnsub"
+                class="btn btn-primary text-white rounded-pill px-4 py-2 my-4"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="sub-img my-2">
+              <img src="img/Sent Message-rafiki.png" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end subscribe -->
+
+    <!-- start footer -->
+
+    <footer class="bg-dark">
+<div class="container text-white text-center p-5">
+  <p>Copyright © 2021 Designed by Mostafa Mahmoud. All rights reserved</p>
+  <div class="icon d-flex justify-content-center px-3">
+    <i class="fa-brands fa-facebook mx-2"></i>
+    <i class="fa-brands fa-twitter mx-2"></i>
+    <i class="fa-brands fa-pinterest mx-2"></i>
+    <i class="fa-brands fa-google-plus-g mx-2"></i>
+  </div>
+</div>
+    </footer>
+
+    <!-- end footer -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
